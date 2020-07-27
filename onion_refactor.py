@@ -39,7 +39,9 @@ st.title('Onion or Not?')
 
 model_picker = st.sidebar.radio('Select different methods for prediction.',
                         ('Logistic Regression, Quick and Dirty',
-                         'Naive Bayes, NLTK Processed')
+                         'Naive Bayes, NLTK Processed',
+                         'Neural Network'
+                         )
                         )
 st.sidebar.warning('**Update:** Still have no solutions for the crashing with the naive Bayes model, '
                    'perhaps I will look for another model in place of the naive Bayes. '
@@ -131,6 +133,9 @@ elif model_picker == 'Naive Bayes, NLTK Processed':
             st.write("It's from the Onion!")
         else:
             st.write("It's not from the Onion!")
+
+elif model_picker == "Neural Network":
+    st.write('In progress')
 
 st.markdown('---')
 if st.checkbox('Show background info'):
